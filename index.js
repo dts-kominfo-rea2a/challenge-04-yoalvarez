@@ -12,13 +12,13 @@ const createDate = (datesArrayParam, urutanParam) => {
   if (urutanParam == undefined)  {
     let newDatesArray = [];
     for (let index = 0; index < datesArrayParam.length; index++)  {
-      let epochTime = Date.parse(datesArrayParam[index]);
+      let epochTime = (Date.parse(datesArrayParam[index]))/1000;
       newDatesArray.push(epochTime);
     }
     return newDatesArray.sort().join('-');
     }
   else  {
-    let epochTime = Date.parse(dates[urutanParam]);
+    let epochTime = (Date.parse(dates[urutanParam]))/1000;
     return epochTime.toString();
   }
 };
