@@ -19,7 +19,7 @@ const createDate = (datesArrayParam, urutanParam) => {
     }
   else  {
     let epochTime = Date.parse(dates[urutanParam]);
-    return epochTime;
+    return epochTime.toString();
   }
 };
 
