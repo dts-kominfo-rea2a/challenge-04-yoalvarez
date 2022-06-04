@@ -8,7 +8,20 @@ const dates = [
 ];
 
 // TODO: Buatlah fungsi createDate
-const createDate = null;
+const createDate = (datesArrayParam, urutanParam) => {
+  if (urutanParam == undefined)  {
+    let newDatesArray = [];
+    for (let index = 0; index < datesArrayParam.length; index++)  {
+      let epochTime = Date.parse(datesArrayParam[index]);
+      newDatesArray.push(epochTime);
+    }
+    return newDatesArray.sort().join('-');
+    }
+  else  {
+    let epochTime = Date.parse(dates[urutanParam]);
+    return epochTime;
+  }
+};
 
 // ! JANGAN DIMODIFIKASI
 (() => {
