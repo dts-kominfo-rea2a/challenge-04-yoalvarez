@@ -18,7 +18,7 @@ const createDate = (datesArrayParam, urutanParam) => {
     return newDatesArray.sort().join('-');
     }
   else  {
-    let epochTime = (Date.parse(dates[urutanParam]))/1000;
+    let epochTime = (Date.parse(datesArrayParam[urutanParam]))/1000;
     return epochTime.toString();
   }
 };
